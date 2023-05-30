@@ -1,11 +1,15 @@
 import React from 'react';
+import {Metadata} from "next";
 
-const MyComponent = () => {
+export const metadata:Metadata={
+    title:"About | Next Full"
+}
+const About = () => {
     return (
         <div>
-            
+            About Page
         </div>
     );
 };
 
-export default MyComponent;
+export default About;

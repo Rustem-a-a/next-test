@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 
-const MyComponent = ({error}) => {
+const MyComponent = ({error}:any) => {
     return (
         <div>
             Error is -  {error}

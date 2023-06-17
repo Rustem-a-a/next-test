@@ -1,4 +1,5 @@
 import{NextResponse} from "next/server";
+import {restapiLimiter} from "@/app/api/config/limiter";
 
 const DATA_SOURCE_URL = "https://jsonplaceholder.typicode.com/todos"
 const API_KEY = process.env.DATA_API_KEY
@@ -6,6 +7,8 @@ const API_KEY = process.env.DATA_API_KEY
 
 
 export async function GET (){
+    const remaining = await restapiLimiter.removeTokens(1)
+    console.log('remaining = '+ remaining)
     const response = await fetch(DATA_SOURCE_URL)
     const todos:Todo[] = await response.json()
     return NextResponse.json(todos)

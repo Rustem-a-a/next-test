@@ -22,7 +22,7 @@ const MyComponent = () => {
                     <Link href="https://www.github.com" target="_blank" className="text-white/90 hover:text-white"><FaGithub/></Link>
                     {/*<Link href="https://www.youtube.com" className="text-white/90 hover:text-white"><FaYoutube/></Link>*/}
                 </div>
-                {session?.data && <Link href="/">Profile</Link>}
+                {session?.data && <Link href="/profile">Profile</Link>}
                 {session?.data
                     ? <Link href="#" onClick={()=>signOut({
                     callbackUrl:'/',

@@ -1,5 +1,4 @@
 import {NextRequest, NextResponse} from "next/server";
-
 const allowedOrigins = process.env.NODE_ENV === 'production'
     ? ['https://www.yoursite.com', 'https://yoursite.com']
     : ['http://localhost:4000']
